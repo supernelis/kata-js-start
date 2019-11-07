@@ -40,3 +40,9 @@ To run the tests, use the standard way of running tests in npm:
 ```bash
 npm test
 ```
+
+In case you took a copy of an existing project and it refuses to work, try this to reinstall all dependencies
+
+```bash
+npm clean-install
+```
