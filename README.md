@@ -46,3 +46,11 @@ In case you took a copy of an existing project and it refuses to work, try this 
 ```bash
 npm clean-install
 ```
+
+To run the tests with coverage, use the following command:
+
+```bash
+npm run coverage
+```
+Under coverage > lcov-report > index.html you can find the coverage report in html form
+
