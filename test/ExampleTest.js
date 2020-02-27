@@ -1,4 +1,6 @@
-const assert = require("chai").assert
+const assert = require("chai").assert;
+let ExampleCode = require('../src/ExampleCode');
+
 
 describe('Example', function () {
     it('should fail', function () {
@@ -13,10 +15,15 @@ describe('Example', function () {
         {input: 2, expected: "2"},
     ];
 
-    testValues.forEach(function(test) {
-        it(`gives ${ test.expected } for ${ test.input }`, function () {
-            assert.equal(test.expected,`${test.input}`);
-        });
+    testValues.forEach(function (test) {
+            it(`gives ${test.expected} for ${test.input}`, function () {
+                assert.equal(test.expected, `${test.input}`);
+            });
         }
     );
+
+    it('should return correct text', function () {
+        let exampleCode = new ExampleCode();
+        assert.equal(exampleCode.coveredFunction(), "covered text")
+    });
 });
